@@ -25,12 +25,12 @@ class CategoryTestCase(TestCase):
         actual = str(c1)
         self.assertEqual(expected, actual)
 
-class FrontEmdTestCase(TestCase):
+class FrontEndTestCase(TestCase):
 
     fixtures = ['blogging_test_fixture.json']
 
     def setUp(self):
-        self.now = datetime.now()
+        self.now = datetime.datetime.now(datetime.UTC)
         self.timedelta = datetime.timedelta(15)
         author = User.objects.get(pk=1)
         for count in range(1, 11):
@@ -45,7 +45,7 @@ class FrontEmdTestCase(TestCase):
     def test_list_only_published(self):
         resp = self.client.get('/')
         resp_text = resp.content.decode(resp.charset)
-        self.asserttrue("Recent Posts" in resp_text)
+        self.asserttrue("Really Cool Posts waiting for you!" in resp_text)
         for count in range(1, 11):
             title = "Post %d Title" % count
             if count < 6:

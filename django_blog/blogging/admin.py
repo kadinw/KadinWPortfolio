@@ -17,5 +17,5 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
     search_fields = ('name',)
 
-admin.site.register(Post)
-admin.site.register(Category)
+admin.site.register(Post, PostAdmin)
+admin.site.register(Category, CategoryAdmin)

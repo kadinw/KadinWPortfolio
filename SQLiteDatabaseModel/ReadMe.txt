@@ -8,7 +8,7 @@ that can be loaded into the a database via the load_status_updates, and load_use
 TO RUN THIS PROGRAM: Run the menu.py script, and follow the prompts in terminal.
 This will create a database called 'socialnetwork.db' that all scipts in this repo will interact with.
 
-A debugging_notes.md file is also available, where manuy of my previous tests in development are tracked.
+A debugging_notes.md file is also available, where many of my previous tests in development are tracked.
 
 Script Notes:
 
